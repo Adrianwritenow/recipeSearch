@@ -16,13 +16,21 @@ alert(userInput);
       response.json().then(function(data){
         let main = document.querySelector(".main")
         var template =`
-        <div class = imageContainer>
+        <div class = "searchBar">
+            <input type="search" id="recipeSearch">
+            <input type="submit" onclick="foodSearch();">
+        </div>
+        <div class = foodContainer>
         `
 for (var i = 0; i < data.results.length; i++) {
   console.log(data.results[i].title);
 
   template += `
-  <img src = "${data.results[i].thumbnail}">
+  <div clas = foodItem>
+
+    <h3>${data.results[i].title}</h3>
+    <a href="${data.results[i].href}"><img src = "${data.results[i].thumbnail}"></a>
+  </div>
     `
 }
 template += `</div>`;
