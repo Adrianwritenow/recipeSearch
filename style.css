@@ -4,18 +4,25 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+margin-right: 75px;
+padding-left: 75px;
+}
 }
 .foodItem{
   width:20%;
 }
 
 img{
+  z-index: 100;
   width: 200px;
   height: 200px;
 }
 h3{
+  z-index: 200;
   width:200px;
 }
 .searchBar{
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  margin-left: 85px;
+
 }
