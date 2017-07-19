@@ -3,7 +3,7 @@ function foodSearch(){
   var userInput = document.getElementById("recipeSearch").value;
 
 
-  fetch(`https://crossorigin.me/http://www.recipepuppy.com/api/?i=${userInput}`)
+  fetch(`https://crossorigin.me/http://www.recipepuppy.com/api/?q=${userInput}`)
 
   .then(function(response){
     if (response.status !== 200) {
@@ -23,7 +23,7 @@ function foodSearch(){
           console.log(data.results[i].title);
           template += `
           <div clas = foodItem>
-            <a href="${data.results[i].href}"><img src = "${data.results[i].thumbnail}"></a>
+            <a href="${data.results[i].href}"><img src = "${data.results[i].thumbnail}" onerror = "this.src ='https://pbs.twimg.com/media/CZiq32pUUAA_6pg.jpg'"</a>
             <h3>${data.results[i].title}</h3>
           </div>
           `
