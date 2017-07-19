@@ -5,9 +5,9 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 margin-right: 75px;
-padding-left: 75px;
+margin-left: 75px;
 }
-}
+
 .foodItem{
   width:20%;
 }
@@ -25,4 +25,14 @@ h3{
   margin-bottom: 30px;
   margin-left: 85px;
 
+}
+
+.foodContainer{
+padding-top: 50px;
+border-top: 2px solid black;
+}
+#recipeSearch{
+  width:200px;
+  height: 30px;
+  border-radius: 0%;
 }
